@@ -1,0 +1,10 @@
+.nav-btn:nth-child(1) {
+	font-weight: bold;
+}
+
+.content {
+	background-color: black;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
