@@ -114,8 +114,44 @@
             return;
         }
         else if($_POST['action'] == 'switch'){
+            $sql = "SELECT * FROM profiles WHERE id = " . $_POST['profileId'];
+
+            $statement = $conn->prepare($sql);
+            $statement->execute();
+        
+            $data = $statement->get_result()->fetch_assoc();
+
             $_SESSION['profileId'] = $_POST['profileId'];
+            $_SESSION['isChildAccount'] = $data['isChildAccount'];
             header('location: ../browse.php');
+            return;
+        }
+        else if($_POST['action'] == 'checkPin'){
+            $sql = "SELECT * FROM profiles WHERE id = " . $_POST['profileId'];
+
+            $statement = $conn->prepare($sql);
+            $statement->execute();
+        
+            $data = $statement->get_result()->fetch_assoc();
+
+            if($data['pin'] == $_POST['pin']){
+                $_SESSION['profileId'] = $_POST['profileId'];
+                $_SESSION['isChildAccount'] = $data['isChildAccount'];
+                header('location: ../browse.php');
+                return;
+            }
+            else{
+                $_SESSION['error'] = 'Invalid PIN';
+                $_SESSION['checkedProfileId'] = $_POST['profileId'];
+                header('location: ../profile-selection.php');
+                return;
+            }
+
+        }
+        else if($_POST['action'] == 'redirect'){
+            $_SESSION['error'] = '';
+            $_SESSION['checkedProfileId'] = $_POST['profileId'];
+            header('location: ../profile-selection.php');
             return;
         }
     }

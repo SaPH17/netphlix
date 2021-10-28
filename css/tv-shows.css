@@ -1,0 +1,95 @@
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 230px);
+  column-gap: 0.2em;
+  grid-auto-rows: auto;
+  padding: 0 3.5em;
+}
+
+.movies-container .image {
+  margin: 1.5em 0.5em;
+  position: relative;
+}
+
+.movies-container .image img {
+  width: 230px;
+  height: 130px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.movies-container .image .preview-modal {
+  z-index: 10;
+  position: absolute;
+  top: -70%;
+  left: -25%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #181818;
+}
+
+.movies-container .image .preview-modal .preview-modal-image img {
+  width: 344px;
+  height: 193px;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons {
+  display: flex;
+  align-items: center;
+  padding: 1.5em;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons > * + * {
+  margin-left: 1em;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: #767676 2px solid;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn:hover {
+  border-color: white;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn i {
+  color: white;
+  font-weight: 900;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  color: white;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn:first-child {
+  background-color: white;
+  border-color: white;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn:first-child i {
+  color: black;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn:first-child:hover {
+  opacity: 0.85;
+}
+
+.movies-container .image .preview-modal .preview-modal-buttons .preview-modal-btn:last-child {
+  margin-left: auto;
+}
+
+body {
+  background-color: #141414;
+}

@@ -1,10 +1,19 @@
 .nav-btn:nth-child(1) {
-	font-weight: bold;
+  font-weight: bold;
+}
+
+.content-container {
+  position: relative;
 }
 
 .content {
-	background-color: black;
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
+  background-color: #141414;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3em;
+}
+
+body {
+  background-color: #141414;
 }

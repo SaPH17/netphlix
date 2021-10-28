@@ -1,0 +1,200 @@
+.detail-modal-wrapper {
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 3em 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.detail-modal-wrapper .detail-modal-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  border-radius: 10px;
+  width: 850px;
+  padding-bottom: 2em;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container {
+  position: relative;
+  width: 850px;
+  height: 480px;
+  background: linear-gradient(to top, #181818, transparent 50%);
+  object-fit: cover;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .preview-video {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 850px;
+  height: 480px;
+  object-fit: cover;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  display: flex;
+  padding: 1em 1em 6em 3em;
+  flex-direction: column;
+  background: linear-gradient(to top, #181818, transparent 50%);
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .close-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
+  background-color: #181818;
+  border-radius: 50%;
+  padding: 0.75em;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .close-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .overlay-title {
+  margin-top: auto;
+  font-size: 4rem;
+  max-width: 15ch;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container {
+  margin-top: 1em;
+  padding-right: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container .btn {
+  font-size: 1.125rem;
+  padding: 0.5em 1.25em;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container .btn > svg {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.75em;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container .btn-play {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container .btn-play:hover {
+  opacity: 0.8;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container .mute-btn-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 0;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container .mute-btn-container .mute-btn {
+  cursor: pointer;
+  display: flex;
+  padding: 0.75em;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  display: none;
+}
+
+.detail-modal-wrapper .detail-modal-container .preview-container .overlay .btn-container .mute-btn-container .unmute-btn {
+  cursor: pointer;
+  display: flex;
+  padding: 0.75em;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.detail-modal-wrapper .detail-modal-container .information-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 1em 2em;
+}
+
+.detail-modal-wrapper .detail-modal-container .information-container .release-date {
+  padding-left: 0.5em;
+}
+
+.detail-modal-wrapper .detail-modal-container .information-container .synopsis {
+  margin-top: 1em;
+  font-size: 1.2rem;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container {
+  display: flex;
+  color: white;
+  padding: 1em 2em;
+  flex-direction: column;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .title {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .episode-row {
+  display: flex;
+  align-items: center;
+  padding: 2em 4em 2em 2em;
+  border-top: 1px solid #404040;
+  cursor: pointer;
+  border-bottom: 1px solid #404040;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .episode-row .episode-row-count {
+  font-size: 1.5rem;
+  color: #d2d2d2;
+  margin-right: 0.5em;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .episode-row .episode-row-image img {
+  width: 140px;
+  height: 73px;
+  border-radius: 10px;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .episode-row .episode-row-information {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .episode-row .episode-row-information .episode-row-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .episode-row .episode-row-information .episode-row-header .episode-row-name {
+  font-weight: bold;
+}
+
+.detail-modal-wrapper .detail-modal-container .episodes-container .episode-row .episode-row-information .episode-row-synopsis {
+  margin-top: 0.5em;
+  color: #d2d2d2;
+}

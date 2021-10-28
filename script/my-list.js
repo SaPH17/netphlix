@@ -6,20 +6,20 @@ $(document).ready(() => {
 function getMyList(){
     $.ajax({
         type: 'POST',
-        url: 'api/getMyList.php',
+        url: 'api/getAllMyList.php',
         data: {
             page,
             profileId
         },
         success: (res) => {
-            console.log(res)
-            res.data.forEach(e => {
-                $("#images-container").append(`
-                <div class="image">
-                    <img src="${e.image}" alt="">
-                </div>
-                `)
-            });
+            res.data.forEach((e, idx) => {
+                var template = `<div class="image">
+                                    <img src="${e.image}" alt="">
+                                </div>`
+
+                var tag = $(template).appendTo("#images-container")
+                imageOverListener(tag, e)
+            })
         }
     })
 }

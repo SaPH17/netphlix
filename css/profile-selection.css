@@ -1,79 +1,152 @@
 .container {
-	background-color: #131313;
+  background-color: #131313;
 }
 
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em 0;
 }
 
 .title {
-	font-size: 3.25rem;
-	color: white;
+  font-size: 3.25rem;
+  color: white;
 }
 
 .profiles {
-	display: flex;
-	margin-top: 2em;
+  display: flex;
+  margin-top: 2em;
 }
 
 .profile {
-	margin: 0 1em;
-	cursor: pointer;
+  margin: 0 1em;
+  cursor: pointer;
 }
 
 .profile:hover .profile-name {
-	color: #dfdfdf;
+  color: #dfdfdf;
 }
 
 .profile:hover > .profile-image > img {
-	outline: 3px white solid;
-	outline-offset: -3px;
+  outline: 3px white solid;
+  outline-offset: -3px;
 }
 
 .profile-image > img {
-	width: 150px;
-	height: 150px;
-	border-radius: 4px;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
 }
 
 .profile-name {
-	padding-top: 0.5em;
-	text-align: center;
-	color: #808080;
-	font-size: 1.25rem;
+  padding-top: 0.5em;
+  text-align: center;
+  color: #808080;
+  font-size: 1.25rem;
 }
 
 .add-button > .profile-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 150px;
-	height: 150px;
-	border-radius: 4px;
-}
-
-.add-button:hover > .profile-image {
-	background-color: #dfdfdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
 }
 
 .add-button > .profile-image > i {
-	font-size: 4rem;
-	color: grey;
+  font-size: 4rem;
+  color: grey;
+}
+
+.add-button:hover > .profile-image {
+  background-color: #dfdfdf;
 }
 
 .button {
-	padding: 0.6em 1.5em;
-	margin-top: 5em;
-	color: #808080;
-	border: 1px #808080 solid;
-	cursor: pointer;
-	letter-spacing: 2px;
+  padding: 0.6em 1.5em;
+  margin-top: 5em;
+  color: #808080;
+  border: 1px #808080 solid;
+  cursor: pointer;
+  letter-spacing: 2px;
+  background-color: transparent;
 }
 
 .button:hover {
-	border: 1px #dfdfdf solid;
-	color: #dfdfdf;
+  border: 1px #dfdfdf solid;
+  color: #dfdfdf;
+}
+
+.pin-modal {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em 0;
+}
+
+.pin-modal .close-icon {
+  cursor: pointer;
+  color: white;
+  margin-left: auto;
+  margin-right: 5em;
+}
+
+.pin-modal .close-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.pin-modal .header {
+  color: white;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.pin-modal .sub-header {
+  color: #aaa;
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+
+.pin-modal form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pin-modal .error {
+  color: #b9090b;
+  font-size: 1.25rem;
+  margin-top: 0.5em;
+}
+
+.pin-modal .pin-input {
+  background: 0 0;
+  box-shadow: none;
+  color: white;
+  border: 2px solid #fff;
+  width: 7em;
+  height: 3.5em;
+  font-size: 3rem;
+  padding: 0.2em;
+  margin: 0.1em;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 300ms ease-in-out;
+  letter-spacing: 5px;
+}
+
+.pin-modal .pin-input:focus {
+  border: 2px solid #fff;
+  outline: none;
+  transform: scale(1);
+}
+
+body {
+  width: auto;
 }

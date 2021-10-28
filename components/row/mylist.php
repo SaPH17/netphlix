@@ -3,19 +3,22 @@
 $rowTitle = 'My List';
 $isMyList = true;
 $isWatchList = false;
+$leftId = "mylist-left-btn";
+$rightId = "mylist-right-btn";
+$containerId = "mylist-images-container";
+$link = "/my-list.php";
 
-$rowData = [];
+// $rowData = [];
 
-$sql = "SELECT * FROM watch_lists as wl JOIN movies as m ON wl.movieId = m.id WHERE profileId = " . $profile['id'] . " ORDER BY wl.id DESC LIMIT 6";
+// $sql = "SELECT * FROM watch_lists as wl JOIN movies as m ON wl.movieId = m.id WHERE profileId = " . $profile['id'] . " ORDER BY wl.id DESC LIMIT 7";
 
-$statement = $conn->prepare($sql);
-$statement->execute();
+// $statement = $conn->prepare($sql);
+// $statement->execute();
 
-$rowData = $statement->get_result();
+// $rowData = $statement->get_result();
 
-if(!empty($rowData)){
+// if($rowData->num_rows > 0){
     include './components/row/row.php';
-}
-
+// }
 
 ?>

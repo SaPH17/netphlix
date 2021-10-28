@@ -3,6 +3,10 @@
 $rowTitle = 'Latest Release';
 $isMyList = false;
 $isWatchList = false;
+$leftId = "latest-left-btn";
+$rightId = "latest-right-btn";
+$containerId = "latest-images-container";
+$link = "/latest.php";
 
 $sql = "SELECT * FROM movies ORDER BY releaseDate DESC LIMIT 6";
 
@@ -11,6 +15,7 @@ $statement->execute();
 
 $rowData = $statement->get_result();
 
-include './components/row/row.php'
-
+if($rowData->num_rows > 0){
+    include './components/row/row.php';
+}
 ?>

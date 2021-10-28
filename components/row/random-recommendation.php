@@ -10,6 +10,10 @@ $randomGenre = $statement->get_result()->fetch_assoc();
 $rowTitle = $randomGenre['name'] . ' Movies';
 $isMyList = false;
 $isWatchList = false;
+$leftId = "random-left-btn";
+$rightId = "random-right-btn";
+$containerId = "random-images-container";
+$link = "/genre.php?genre=" . $randomGenre['id'];
 
 $rowData = [];
 
@@ -20,7 +24,7 @@ $statement->execute();
 
 $rowData = $statement->get_result();
 
-if(!empty($rowData)){
+if($rowData->num_rows > 0){
     include './components/row/row.php';
 }
 ?>

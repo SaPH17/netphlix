@@ -1,0 +1,149 @@
+.container {
+	background-color: #131313;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5em 0;
+}
+.title {
+	font-size: 3.25rem;
+	color: white;
+}
+.profiles {
+	display: flex;
+	margin-top: 2em;
+}
+.profile {
+	margin: 0 1em;
+	cursor: pointer;
+	&:hover {
+		.profile-name {
+			color: #dfdfdf;
+		}
+		> .profile-image {
+			> img {
+				outline: 3px white solid;
+				outline-offset: -3px;
+			}
+		}
+	}
+}
+.profile-image {
+	> img {
+		width: 150px;
+		height: 150px;
+		border-radius: 4px;
+	}
+}
+.profile-name {
+	padding-top: 0.5em;
+	text-align: center;
+	color: #808080;
+	font-size: 1.25rem;
+}
+.add-button {
+	> .profile-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 150px;
+		height: 150px;
+		border-radius: 4px;
+		> i {
+			font-size: 4rem;
+			color: grey;
+		}
+	}
+	&:hover {
+		> .profile-image {
+			background-color: #dfdfdf;
+		}
+	}
+}
+.button {
+	padding: 0.6em 1.5em;
+	margin-top: 5em;
+	color: #808080;
+	border: 1px #808080 solid;
+	cursor: pointer;
+	letter-spacing: 2px;
+	background-color: transparent;
+	&:hover {
+		border: 1px #dfdfdf solid;
+		color: #dfdfdf;
+	}
+}
+
+.pin-modal {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	padding: 5em 0;
+
+	.close-icon {
+		cursor: pointer;
+		color: white;
+		margin-left: auto;
+		margin-right: 5em;
+
+		svg {
+			width: 32px;
+			height: 32px;
+		}
+	}
+
+	.header {
+		color: white;
+		font-size: 2.4rem;
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	.sub-header {
+		color: #aaa;
+		font-size: 1.25rem;
+		margin-bottom: 1em;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.error {
+		color: #b9090b;
+		font-size: 1.25rem;
+		margin-top: 0.5em;
+	}
+
+	.pin-input {
+		background: 0 0;
+		box-shadow: none;
+		color: white;
+		border: 2px solid #fff;
+		width: 7em;
+		height: 3.5em;
+		font-size: 3rem;
+		padding: 0.2em;
+		margin: 0.1em;
+		text-align: center;
+		transform: scale(0.9);
+		transition: transform 300ms ease-in-out;
+		letter-spacing: 5px;
+
+		&:focus {
+			border: 2px solid #fff;
+			outline: none;
+			transform: scale(1);
+		}
+	}
+}
+
+body {
+	width: auto;
+}

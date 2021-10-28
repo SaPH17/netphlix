@@ -21,20 +21,25 @@ $(window).scroll(() => {
 function getlatest(){
     $.ajax({
         type: 'POST',
-        url: 'api/getLatest.php',
+        url: 'api/getAllLatest.php',
         data: {
             index,
             profileId
         },
         success: (res) => {
-            index = res.nextIndex
-            res.data.forEach(e => {
-                $("#images-container").append(`
-                <div class="image">
-                    <img src="${e.image}" alt="">
-                </div>
-                `)
-            });
+            if(res.data.length > 0){
+                index = res.nextIndex
+            }
+
+            res.data.forEach((e, idx) => {
+                var template = `<div class="image">
+                                    <img src="${e.image}" alt="">
+                                </div>`
+
+                var tag = $(template).appendTo("#images-container")
+                imageOverListener(tag, e)
+            })
+
             loading = false
         }
     })

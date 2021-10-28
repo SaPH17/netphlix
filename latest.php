@@ -19,34 +19,36 @@
     <link rel="icon" href="./assets/website/icon.ico">
     <link rel="stylesheet" href="./components/header2/header2.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./components/spotlight/spotlight.css">
-    <link rel="stylesheet" href="./components/row/row.css">
     <link rel="stylesheet" href="./css/my-list.css">
+    <link rel="stylesheet" href="./components/detail-modal/detail-modal.css">
 <body>
     <?php 
         include './components/header2/header2.php';
-
-        $sql = "SELECT * FROM watch_lists as wl JOIN movies as m ON wl.movieId = m.id WHERE profileId = " . $profile['id'] . " ORDER BY wl.id DESC LIMIT 30";
-
-        $statement = $conn->prepare($sql);
-        $statement->execute();
-    
-        $lists = $statement->get_result();
-        
     ?>
-    <div class="content">
-        <div class="title">
-            Latest
-        </div>
-        <div class="images-container" id="images-container">
+    
+    <div class="content-container">
+        <div class="content" <?php if(isset($_GET['jbv'])){
+            echo 'style="position: fixed"';
+        } ?>>
+            <div class="title">
+                Latest
+            </div>
+            <div class="images-container" id="images-container">
 
+            </div>
         </div>
+        <?php
+            include './components/detail-modal/detail-modal.php';
+        ?>
     </div>
 </body>
 <script>
-    var profileId = <?php echo $profile['id']; ?>
+    var profileId = <?php echo $profile['id']; ?>;
+    var mylistShown = false
 </script>
 <script src="./components/header2/header2.js"></script>
 <script src="./script/jquery-3.5.1.js"></script>
+<script src="./script/movie-image.js"></script>
 <script src="./script/latest.js"></script>
+<script src="./script/detail-modal.js"></script>
 </html>

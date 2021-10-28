@@ -17,7 +17,7 @@
     $total_item = $statement->get_result()->fetch_array()[0];
     $total_page = ceil($total_item/30);
 
-    if($_GET['page'] == '' || $_GET['page'] > $total_page || $_GET['page'] < 1){
+    if($total_page > 0 && ($_GET['page'] == '' || $_GET['page'] > $total_page || $_GET['page'] < 1)){
         header('location: my-list.php?page=1');
     }
 ?>
@@ -32,28 +32,51 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" href="./assets/website/icon.ico">
     <link rel="stylesheet" href="./components/header2/header2.css">
+    <link rel="stylesheet" href="./components/detail-modal/detail-modal.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/my-list.css">
 <body>
     <?php 
         include './components/header2/header2.php';
     ?>
-    <div class="content">
-        <div class="title">
-            My List
-        </div>
-        <div class="images-container" id="images-container">
+    
+    <div class="content-container">
+        <div class="content" <?php if(isset($_GET['jbv'])){
+            echo 'style="position: fixed"';
+        } ?>>
+            <div class="title">
+                My List
+            </div>
+            <div class="images-container" id="images-container">
 
+            </div>
+            <div class="page-links">
+                
+                <?php 
+                
+                    if($total_page == 0){
+                ?>
+                    <div class="empty-alert">
+                        Your watch list is empty!
+                    </div>
+                <?php
+
+                    }
+                    else{
+                        for($i = 1; $i <= $total_page; $i++){
+                
+                ?>
+                    <a class="page-link unselectable" href="./my-list.php?page=<?= $i ?>"><?= $i ?></a>
+                <?php
+
+                        }
+                    }
+                ?>
+            </div>
         </div>
-        <div class="page-links">
-            
-            <?php for($i = 1; $i <= $total_page; $i++){
-            ?>
-                   <a class="page-link unselectable" href="./my-list.php?page=<?= $i ?>"><?= $i ?></a>
-            <?php
-                }
-            ?>
-        </div>
+        <?php
+            include './components/detail-modal/detail-modal.php';
+        ?>
     </div>
 </body>
 <script>
@@ -62,5 +85,7 @@
 </script>
 <script src="./components/header2/header2.js"></script>
 <script src="./script/jquery-3.5.1.js"></script>
+<script src="./script/movie-image.js"></script>
 <script src="./script/my-list.js"></script>
+<script src="./script/detail-modal.js"></script>
 </html>

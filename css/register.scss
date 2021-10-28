@@ -1,0 +1,110 @@
+.header1 {
+	> .logo {
+		fill: red;
+		height: 45px;
+		width: 167px;
+	}
+}
+.container {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+		url("../assets/website/bg1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+}
+header {
+	padding: 1.5em 3em;
+}
+.logo {
+	fill: red;
+	height: 45px;
+	width: 167px;
+}
+.content {
+	display: flex;
+	justify-content: center;
+}
+.register-container {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.75);
+	padding: 3em;
+	border-radius: 4px;
+	width: 450px;
+	> form {
+		display: flex;
+		flex-direction: column;
+	}
+	> * {
+		+ {
+			* {
+				margin-top: 1.5em;
+			}
+		}
+	}
+}
+form {
+	> * {
+		+ {
+			* {
+				margin-top: 1.5em;
+			}
+		}
+	}
+}
+.input {
+	padding: 1em 1.25em;
+	color: white;
+	height: 50px;
+	line-height: 50px;
+	border: 0;
+	border-radius: 4px;
+	background-color: #333;
+	font-size: 1rem;
+	&::placeholder {
+		font-size: 1rem;
+	}
+}
+input {
+	&:focus-visible {
+		outline: 0;
+		background-color: #454545;
+	}
+}
+.register-button {
+	margin-top: 3em;
+	background-color: red;
+	outline: none;
+	color: white;
+	border: none;
+	padding: 1em 1.5em;
+	border-radius: 4px;
+	font-weight: bold;
+	&:hover {
+		opacity: 0.9;
+		cursor: pointer;
+	}
+}
+.error {
+	color: red;
+	font-size: 1rem;
+	border: 1px red solid;
+	border-radius: 4px;
+	padding: 1em 1.5em;
+}
+.register-title {
+	font-weight: bold;
+	color: white;
+	font-size: 2rem;
+	margin-bottom: 0.5em;
+}
+.register-footer {
+	color: #737373;
+	a {
+		color: white;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

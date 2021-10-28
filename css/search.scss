@@ -1,0 +1,23 @@
+.movies-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 230px);
+	column-gap: 0.4em;
+	grid-auto-rows: auto;
+	padding: 0 3em;
+	margin-top: 5em;
+
+	.image {
+		margin: 2em 0.5em;
+
+		img {
+			width: 230px;
+			height: 130px;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+	}
+}
+
+body {
+	background-color: #141414;
+}

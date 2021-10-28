@@ -14,3 +14,20 @@ function toggleMute(action){
         unmuteBtn.style.display = 'none'
     }
 }
+
+$(document).ready(() => {
+    getMyList("all", -1)
+    getLatest()
+    getRandom()
+    getWatchList()
+})
+
+$("#mylist-left-btn").on("click", () => {
+    mylistIdx--
+    getMyList("all", -1)
+})
+
+$("#mylist-right-btn").on("click", () => {
+    mylistIdx++
+    getMyList("all", -1)
+})

@@ -1,8 +1,8 @@
-.header1 > .logo {
-	width: 112.5px;
-	height: 29.6px;
+.header1 {
+  padding: 1.5em 3em;
 }
 
-.header1 {
-	padding: 1.5em 3em;
+.header1 > .logo {
+  width: 112.5px;
+  height: 29.6px;
 }

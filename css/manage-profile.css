@@ -1,102 +1,102 @@
 .container {
-	background-color: #131313;
+  background-color: #131313;
 }
 
 .content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 5em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5em 0;
 }
 
 .title {
-	font-size: 3.25rem;
-	color: white;
+  font-size: 3.25rem;
+  color: white;
 }
 
 .profiles {
-	display: flex;
-	margin-top: 2em;
+  display: flex;
+  margin-top: 2em;
 }
 
 .profile {
-	margin: 0 1em;
-	cursor: pointer;
+  margin: 0 1em;
+  cursor: pointer;
 }
 
 .profile > .profile-image {
-	position: relative;
+  position: relative;
 }
 
 .profile > .profile-image > .overlay {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	color: white;
-	background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .profile > .profile-image > .overlay > svg {
-	width: 35px;
-	height: 35px;
+  width: 35px;
+  height: 35px;
 }
 
 .profile:hover .profile-name {
-	color: #dfdfdf;
+  color: #dfdfdf;
 }
 
 .profile:hover > .profile-image > img {
-	outline: 3px white solid;
-	outline-offset: -3px;
+  outline: 3px white solid;
+  outline-offset: -3px;
 }
 
 .profile-image > img {
-	width: 150px;
-	height: 150px;
-	border-radius: 4px;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
 }
 
 .profile-name {
-	padding-top: 0.5em;
-	text-align: center;
-	color: #808080;
-	font-size: 1.25rem;
+  padding-top: 0.5em;
+  text-align: center;
+  color: #808080;
+  font-size: 1.25rem;
 }
 
 .add-button > .profile-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 150px;
-	height: 150px;
-	border-radius: 4px;
-}
-
-.add-button:hover > .profile-image {
-	background-color: #dfdfdf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
 }
 
 .add-button > .profile-image > i {
-	font-size: 4rem;
-	color: grey;
+  font-size: 4rem;
+  color: grey;
+}
+
+.add-button:hover > .profile-image {
+  background-color: #dfdfdf;
 }
 
 .button {
-	margin-top: 5em;
-	padding: 0.6em 1.5em;
-	font-weight: bold;
-	cursor: pointer;
-	letter-spacing: 2px;
-	color: black;
-	background-color: white;
+  margin-top: 5em;
+  padding: 0.6em 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 2px;
+  color: black;
+  background-color: white;
 }
 
 .button:hover {
-	color: white;
-	background-color: #cc0000;
+  color: white;
+  background-color: #cc0000;
 }
