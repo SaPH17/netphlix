@@ -21,7 +21,6 @@
   align-items: flex-end;
   margin-bottom: 0.75em;
 }
-
 .row-header:hover > .explore-all-button {
   opacity: 1;
   transform: translateX(0);
@@ -49,7 +48,6 @@
   transform: translateX(-30%);
   transition: transform ease-in 300ms, opacity ease-out 300ms;
 }
-
 .explore-all-button > i {
   font-size: 0.75rem;
 }
@@ -66,7 +64,6 @@
   cursor: pointer;
   background-repeat: no-repeat;
 }
-
 .arrow-container:hover > .arrow-btn {
   visibility: visible;
 }
@@ -79,7 +76,6 @@
   flex-grow: 1;
   height: 100%;
 }
-
 .arrow-btn > i {
   font-weight: bold;
   color: white;
@@ -102,22 +98,19 @@
 
 .images-wrapper {
   display: grid;
-  grid-template-columns: repeat(6, minmax(230px, 1fr));
+  grid-template-columns: repeat(6, minmax(13vw, 1fr));
   column-gap: 0.2em;
   grid-auto-rows: auto;
 }
-
 .images-wrapper .image {
   position: relative;
 }
-
 .images-wrapper .image img {
-  width: 230px;
-  height: 130px;
+  width: 15vw;
+  height: 18vh;
   border-radius: 4px;
   cursor: pointer;
 }
-
 .images-wrapper .image .preview-modal {
   z-index: 10;
   position: absolute;
@@ -128,22 +121,18 @@
   border-radius: 10px;
   background-color: #181818;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-image img {
-  width: 344px;
-  height: 193px;
+  width: 21.7vw;
+  height: 26.7vh;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons {
   display: flex;
   align-items: center;
   padding: 1.5em;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons > * + * {
   margin-left: 1em;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn {
   display: flex;
   justify-content: center;
@@ -154,16 +143,13 @@
   height: 40px;
   cursor: pointer;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn:hover {
   border-color: white;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn i {
   color: white;
   font-weight: 900;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn svg {
   display: flex;
   justify-content: center;
@@ -172,20 +158,16 @@
   height: 15px;
   color: white;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn:first-child {
   background-color: white;
   border-color: white;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn:first-child i {
   color: black;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn:first-child:hover {
   opacity: 0.85;
 }
-
 .images-wrapper .image .preview-modal .preview-modal-buttons .preview-modal-btn:last-child {
   margin-left: auto;
 }

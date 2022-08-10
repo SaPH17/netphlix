@@ -90,7 +90,7 @@
 }
 .images-wrapper {
 	display: grid;
-	grid-template-columns: repeat(6, minmax(230px, 1fr));
+	grid-template-columns: repeat(6, minmax(13vw, 1fr));
 	column-gap: 0.2em;
 	grid-auto-rows: auto;
 
@@ -98,8 +98,8 @@
 		position: relative;
 
 		img {
-			width: 230px;
-			height: 130px;
+			width: 13vw;
+			height: 18vh;
 			border-radius: 4px;
 			cursor: pointer;
 		}
@@ -116,8 +116,8 @@
 
 			.preview-modal-image {
 				img {
-					width: 344px;
-					height: 193px;
+					width: 21.7vw;
+					height: 26.7vh;
 				}
 			}
 

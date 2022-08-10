@@ -1,6 +1,6 @@
 .movies-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, 230px);
+	grid-template-columns: repeat(auto-fit, 15vw);
 	column-gap: 0.2em;
 	grid-auto-rows: auto;
 	padding: 0 3.5em;
@@ -10,8 +10,8 @@
 		position: relative;
 
 		img {
-			width: 230px;
-			height: 130px;
+			width: 15vw;
+  			height: 18vh;
 			border-radius: 4px;
 			cursor: pointer;
 		}
@@ -28,8 +28,8 @@
 
 			.preview-modal-image {
 				img {
-					width: 344px;
-					height: 193px;
+					width: 21.7vw;
+					height: 26.7vh;
 				}
 			}
 
